@@ -1,0 +1,112 @@
+doctype html
+html(lang="uk")
+  head
+    title To-Do List
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    //- Підключення стилів Notyf
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css")
+    style.
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #f0f4f8;
+        color: #1a202c;
+        line-height: 1.6;
+        padding: 20px;
+      }
+      header {
+        background: linear-gradient(135deg, #2b6cb0, #3182ce);
+        color: white;
+        padding: 24px 32px;
+        border-radius: 12px;
+        margin-bottom: 24px;
+        box-shadow: 0 4px 12px rgba(43, 108, 176, 0.3);
+      }
+      header h1 { font-size: 1.8rem; font-weight: 600; }
+      main {
+        background: white;
+        padding: 28px 32px;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        max-width: 720px;
+        margin: 0 auto;
+      }
+      h2 { color: #2c5282; margin-bottom: 20px; font-size: 1.4rem; }
+      form {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 28px;
+        flex-wrap: wrap;
+      }
+      form label { display: block; width: 100%; font-weight: 600; margin-bottom: 4px; color: #2d3748; }
+      form input {
+        flex: 1;
+        min-width: 200px;
+        padding: 10px 14px;
+        border: 1px solid #cbd5e0;
+        border-radius: 8px;
+        font-size: 1rem;
+      }
+      form input:focus {
+        outline: none;
+        border-color: #3182ce;
+        box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.2);
+      }
+      form button, .toggle-task, .delete-task {
+        padding: 10px 18px;
+        border: none;
+        border-radius: 8px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.15s;
+      }
+      form button {
+        background: #3182ce;
+        color: white;
+      }
+      form button:hover { background: #2b6cb0; }
+      ul { list-style: none; }
+      li {
+        padding: 14px 16px;
+        border-bottom: 1px solid #e2e8f0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      li:last-child { border-bottom: none; }
+      .task-title { flex: 1; min-width: 140px; }
+      .completed {
+        text-decoration: line-through;
+        color: #38a169;
+      }
+      .task-status {
+        font-size: 0.85rem;
+        font-weight: 600;
+      }
+      .toggle-task {
+        background: #ed8936;
+        color: white;
+      }
+      .toggle-task:hover { background: #dd6b20; }
+      .delete-task {
+        background: #e53e3e;
+        color: white;
+      }
+      .delete-task:hover { background: #c53030; }
+      .empty {
+        color: #718096;
+        font-style: italic;
+        padding: 20px 0;
+      }
+  body
+    header
+      h1 Мій список справ
+    main
+      block content
+    //- Підключення бібліотеки Notyf
+    script(src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js")
+    //- Підключення власного JavaScript-файлу
+    script(src="/main.js")

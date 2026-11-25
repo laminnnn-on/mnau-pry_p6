@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  h2 Список завдань
+
+  //- Форма додавання нового завдання
+  form#task-form
+    label(for="task-title") Назва завдання:
+    input#task-title(
+      type="text"
+      name="title"
+      placeholder="Введіть назву завдання"
+      maxlength="100"
+      required
+    )
+    button(type="submit") Додати завдання
+
+  //- Список завдань
+  if tasks.length === 0
+    p.empty Наразі завдань немає.
+  ul#task-list
+    each task in tasks
+      li(data-id=task.id)
+        if task.completed
+          span.task-title.completed= task.title
+          strong.task-status  — Виконано
+        else
+          span.task-title= task.title
+          strong.task-status  — Не виконано
+        button(type="button" class="toggle-task") Змінити статус
+        button(type="button" class="delete-task") Видалити

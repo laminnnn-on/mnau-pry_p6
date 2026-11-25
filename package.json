@@ -1,0 +1,17 @@
+{
+  "name": "todo-app-practice",
+  "version": "1.0.0",
+  "description": "Практична робота №6 — To-Do List з валідацією Joi та сповіщеннями Notyf",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["express", "pug", "joi", "notyf", "todo"],
+  "author": "Student",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0",
+    "joi": "^17.13.3",
+    "pug": "^3.0.3"
+  }
+}
